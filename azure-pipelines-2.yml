@@ -24,7 +24,8 @@ steps:
 
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.artifactStagingDirectory)' 
+    PathtoPublish: '$(System.DefaultWorkingDirectory)' 
+
     
    
 - task: ArchiveFiles@2
