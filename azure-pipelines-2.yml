@@ -21,4 +21,8 @@ steps:
     ng build --prod
   displayName: 'npm install and build'
 
-- task: PublishBuildArtifacts@1
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/TEST-RESULTS.xml'
