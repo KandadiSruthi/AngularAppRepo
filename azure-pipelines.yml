@@ -42,4 +42,6 @@ steps:
     definition: '9'
     buildVersionToDownload: 'latest'
     artifactName: 'drop'
-    targetPath: '$(Pipeline.Workspace)'
+    targetPath: '$(D:\a\r1\a\)'
+
+    
