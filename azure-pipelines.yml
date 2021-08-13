@@ -35,13 +35,5 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
-- task: DownloadPipelineArtifact@2
-  inputs:
-    buildType: 'specific'
-    project: '15c37bdb-280d-4298-9896-0f00a5fc1e44'
-    definition: '9'
-    buildVersionToDownload: 'latest'
-    artifactName: 'drop'
-    targetPath: '$(D:\a\r1\a\)'
 
-    
+
