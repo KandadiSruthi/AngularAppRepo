@@ -20,7 +20,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
--
+
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
@@ -35,5 +35,14 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     replaceExistingArchive: true
 
+- task: DownloadBuildArtifacts@0
+  inputs:
+    buildType: 'specific'
+    project: '15c37bdb-280d-4298-9896-0f00a5fc1e44'
+    pipeline: '9'
+    buildVersionToDownload: 'latest'
+    downloadType: 'single'
+    artifactName: 'drop'
+    downloadPath: '$(System.ArtifactsDirectory)'
 
 
